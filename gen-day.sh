@@ -13,5 +13,7 @@ if [ ! -f $input_file ]; then
     -H "Cookie: $cookie" > $input_file
 fi
 
-cp python/dayn.py $py_file
-sed -i "s/dayn/day$day/g" $py_file
+if [ ! -f $py_file ]; then
+  cp python/dayn.py $py_file
+  sed -i "s/dayn/day$day/g" $py_file
+fi
