@@ -18,6 +18,7 @@ def part_1():
 
     print(count)
 
+
 @timer
 def part_2():
     input_data = read_file('day4')
@@ -33,6 +34,7 @@ def part_2():
             s = s | set(l.split(' '))
 
     print(count)
+
 
 def validate(s):
             """
