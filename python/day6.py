@@ -3,12 +3,12 @@ from common import read_file, timer
 
 @timer
 def part_1():
-    input_data = read_file('day6')
-    input_data.append('')
+    I = read_file('day6')
+    I.append('')
 
     s = ''
     count = 0
-    for l in input_data:
+    for l in I:
         if l == '':
             count += len(set(s))
             s = ''
@@ -19,13 +19,13 @@ def part_1():
 
 @timer
 def part_2():
-    input_data = read_file('day6')
-    input_data.append('')
+    I = read_file('day6')
+    I.append('')
 
     s = set()
     count = 0
     flag = True
-    for l in input_data:
+    for l in I:
         if l == '':
             count += len(s)
             s = set()

@@ -3,13 +3,13 @@ import re
 
 @timer
 def part_1():
-    input_data = read_file('day7')
+    I = read_file('day7')
     fringe = ['shiny gold']
     total = set()
 
     while fringe:
         fringe = [' '.join(x.split(' ')[:2])
-                for x in input_data for f in fringe if f in ' '.join(x.split(' ')[4:])]
+                for x in I for f in fringe if f in ' '.join(x.split(' ')[4:])]
         total.update(fringe)
 
     print(len(total))
@@ -17,13 +17,13 @@ def part_1():
 
 @timer
 def part_2():
-    input_data = read_file('day7')
+    I = read_file('day7')
     fringe = [('shiny gold', 1)]
     total_bags = []
 
     while fringe:
         head = fringe[0]
-        contents = [' '.join(x.split(' ')[4:]) for x in input_data if x.startswith(head[0])][0]
+        contents = [' '.join(x.split(' ')[4:]) for x in I if x.startswith(head[0])][0]
         if contents.endswith('no other bags.'):
             total_bags.append(head)
             fringe = fringe[1:]

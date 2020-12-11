@@ -3,7 +3,7 @@ from common import read_file, timer
 
 @timer
 def part_1():
-    input_data = read_file('day8')
+    I = read_file('day8')
     i = 0
     acc = 0
     visited = set()
@@ -11,8 +11,8 @@ def part_1():
         if i in visited:
             break
         else:
-            instr = input_data[i][:3]
-            val = int(input_data[i][4:])
+            instr = I[i][:3]
+            val = int(I[i][4:])
 
             visited.add(i)
             if instr == 'acc':
@@ -28,10 +28,10 @@ def part_1():
 
 @timer
 def part_2():
-    input_data = read_file('day8')
+    I = read_file('day8')
 
-    for i in range(len(input_data)):
-        l = input_data.copy()
+    for i in range(len(I)):
+        l = I.copy()
         if l[i][:3] == 'nop':
             l[i] = 'jmp' + l[i][3:]
         if l[i][:3] == 'jmp':

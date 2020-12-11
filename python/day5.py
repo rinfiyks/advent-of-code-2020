@@ -3,14 +3,14 @@ from common import read_file, timer
 
 @timer
 def part_1():
-    input_data = read_file('day5')
-    print(max([seat_id(l) for l in input_data]))
+    I = read_file('day5')
+    print(max([seat_id(l) for l in I]))
 
 
 @timer
 def part_2():
-    input_data = read_file('day5')
-    seats = sorted([seat_id(l) for l in input_data])
+    I = read_file('day5')
+    seats = sorted([seat_id(l) for l in I])
     for i in range(seats[0], seats[-1]):
         if (i - 1 in seats and i + 1 in seats and i not in seats):
             print(i)

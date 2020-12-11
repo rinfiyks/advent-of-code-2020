@@ -3,11 +3,11 @@ from common import read_file, timer
 
 @timer
 def part_1():
-    input_data = sorted([int(x) for x in read_file('day10')])
+    I = sorted([int(x) for x in read_file('day10')])
     c1 = 0
     c3 = 1
     prev = 0
-    for i in input_data:
+    for i in I:
         diff = i - prev
         if diff == 1: c1 += 1
         elif diff == 3: c3 += 1
@@ -18,8 +18,8 @@ def part_1():
 
 @timer
 def part_2():
-    input_data = sorted([int(x) for x in read_file('day10')])
-    I = [0] + input_data + [max(input_data) + 3]
+    I = sorted([int(x) for x in read_file('day10')])
+    I = [0] + I + [max(I) + 3]
     ways = [0] * len(I)
     ways[0] = 1
     for i in range(1, len(I)):

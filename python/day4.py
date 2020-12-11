@@ -4,11 +4,11 @@ import re
 
 @timer
 def part_1():
-    input_data = read_file('day4')
-    input_data.append('')
+    I = read_file('day4')
+    I.append('')
     count = 0
     s = set()
-    for l in input_data:
+    for l in I:
         if l == '':
             s.discard('cid')
             if len(s) == 7: count += 1
@@ -21,11 +21,11 @@ def part_1():
 
 @timer
 def part_2():
-    input_data = read_file('day4')
-    input_data.append('')
+    I = read_file('day4')
+    I.append('')
     count = 0
     s = set()
-    for l in input_data:
+    for l in I:
         if l == '':
             count += validate(s)
 

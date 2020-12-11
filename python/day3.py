@@ -3,11 +3,11 @@ from common import read_file, timer
 
 @timer
 def part_1():
-    input_data = read_file('day3')
+    I = read_file('day3')
     x_pos = 0
-    width = len(input_data[0])
+    width = len(I[0])
     count = 0
-    for row in input_data:
+    for row in I:
         if row[x_pos] == '#':
             count += 1
         x_pos = (x_pos + 3) % width
@@ -16,12 +16,12 @@ def part_1():
 
 @timer
 def part_2():
-    input_data = read_file('day3')
-    s1 = slope(input_data, 1, 1)
-    s2 = slope(input_data, 1, 3)
-    s3 = slope(input_data, 1, 5)
-    s4 = slope(input_data, 1, 7)
-    s5 = slope(input_data, 2, 1)
+    I = read_file('day3')
+    s1 = slope(I, 1, 1)
+    s2 = slope(I, 1, 3)
+    s3 = slope(I, 1, 5)
+    s4 = slope(I, 1, 7)
+    s5 = slope(I, 2, 1)
     print(s1*s2*s3*s4*s5)
 
 

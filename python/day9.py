@@ -3,11 +3,11 @@ from common import read_file, timer
 
 @timer
 def part_1():
-    input_data = [int(x) for x in read_file('day9')]
-    prev = input_data[:25]
+    I = [int(x) for x in read_file('day9')]
+    prev = I[:25]
 
-    for i in range(25, len(input_data)):
-        x = input_data[i]
+    for i in range(25, len(I)):
+        x = I[i]
         if not sum_exists(prev, x):
             print(x)
             break
@@ -24,14 +24,13 @@ def sum_exists(p, n):
 
 @timer
 def part_2():
-    input_data = [int(x) for x in read_file('day9')]
+    I = [int(x) for x in read_file('day9')]
     n = 258585477
     w = 2
     while True:
-        print(w)
-        for i in range(0, len(input_data) - w):
-            if sum(input_data[i:i+w]) == n:
-                r = input_data[i:i+w]
+        for i in range(0, len(I) - w):
+            if sum(I[i:i+w]) == n:
+                r = I[i:i+w]
                 print(min(r) + max(r))
                 return
         w += 1

@@ -4,10 +4,10 @@ import re
 
 @timer
 def part_1():
-    input_data = read_file('day2')
+    I = read_file('day2')
 
     count = 0
-    for l in input_data:
+    for l in I:
         r = re.search(r'^(\d*)-(\d*) (.): (.*)', l)
         lower = int(r[1])
         upper = int(r[2])
@@ -21,10 +21,10 @@ def part_1():
 
 @timer
 def part_2():
-    input_data = read_file('day2')
+    I = read_file('day2')
 
     count = 0
-    for l in input_data:
+    for l in I:
         r = re.search(r'^(\d*)-(\d*) (.): (.*)', l)
         first = int(r[1])
         second = int(r[2])
